@@ -1,0 +1,36 @@
+name: tars_mobile
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.4.9
+  flutter_svg: ^2.0.9
+  shared_preferences: ^2.2.2
+  otp_text_field: ^1.1.3
+  phone_input: ^1.0.0
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/svgs/
+    - assets/images/
+  fonts:
+    - family: SfProDisplay
+      fonts:
+        - asset: assets/fonts/sfprodisplay_reg.OTF
+        - asset: assets/fonts/sfprodisplay_med.OTF
+        - asset: assets/fonts/sfprodisplay_bld.OTF
+    - family: BankGothic
+      fonts:
+        - asset: assets/fonts/bankgothicmdbt.ttf
