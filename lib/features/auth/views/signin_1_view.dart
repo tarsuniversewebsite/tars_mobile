@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tars_mobile/common/widgets/bankgothic_universe_text.dart';
 import 'package:tars_mobile/constants/color_constants.dart';
 import 'package:tars_mobile/features/auth/views/signin_2_view.dart';
-import '../../../common/widgets/bottom_tars_logo.dart';
 import '../../../common/widgets/rounded_elevated_button.dart';
 
 class SigninView1 extends StatelessWidget {
@@ -34,7 +33,7 @@ class SigninView1 extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: const BottomTarsLogo(),
+      // bottomNavigationBar: const BottomTarsLogo(),
     );
   }
 }

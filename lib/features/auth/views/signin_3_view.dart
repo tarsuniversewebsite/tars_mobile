@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tars_mobile/constants/color_constants.dart';
 import '../../../common/widgets/bottom_tars_logo.dart';
+import '../../dashboard/views/dashboard_view.dart';
 import 'password_reset_view.dart';
 import 'signup_view.dart';
 
@@ -36,6 +37,11 @@ class _SigninView3State extends State<SigninView3> {
     final isValid = _formKey.currentState!.validate();
     if (isValid) {
       _formKey.currentState!.save();
+      Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(
+            builder: (context) => DashboardView(),
+          ),
+          (route) => false);
     } else {
       return;
     }
@@ -52,7 +58,8 @@ class _SigninView3State extends State<SigninView3> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextFormField(
-                onTapOutside: (event) => FocusManager.instance.primaryFocus?.unfocus(),
+                onTapOutside: (event) =>
+                    FocusManager.instance.primaryFocus?.unfocus(),
                 enabled: false,
                 initialValue: widget.emailOrPhone,
                 textAlignVertical: TextAlignVertical.center,
@@ -74,7 +81,8 @@ class _SigninView3State extends State<SigninView3> {
                 ),
               ),
               TextFormField(
-                onTapOutside: (event) => FocusManager.instance.primaryFocus?.unfocus(),
+                onTapOutside: (event) =>
+                    FocusManager.instance.primaryFocus?.unfocus(),
                 controller: _passwordController,
                 validator: (value) => validatePassword(value),
                 textAlignVertical: TextAlignVertical.center,

@@ -29,6 +29,7 @@ class MyApp extends ConsumerWidget {
         appBarTheme: AppBarTheme(
           backgroundColor: ColorConstants.white,
           foregroundColor: ColorConstants.white,
+          surfaceTintColor: ColorConstants.white,
           elevation: 0,
         ),
         scaffoldBackgroundColor: ColorConstants.white,
